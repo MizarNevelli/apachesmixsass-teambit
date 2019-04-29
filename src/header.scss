@@ -1,0 +1,66 @@
+
+nav.topbar{
+  width: 100%;
+  height: 80px;
+  @include flexed-centered;
+
+  .topbar-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    border-bottom: 1px solid darkgrey;
+
+
+  }
+  @media only screen and (max-width: 1200px) {
+    .topbar-wrap {
+      width: 95%;
+    }
+  }
+
+  .right-side-topbar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .fa-google{
+    display: none;
+  }
+
+  button{
+    background: white;
+    border-color: #30488F;
+    border-radius: 10px;
+    padding: 7px;
+    color: #30488F;
+    font-size: 90%;
+    @include flexed-centered;
+    transition: 0.3s;
+
+    &:hover{
+      color: white;
+      background: #30488F;
+      img{
+        display: none;
+      }
+      .fa-google{
+        display: inline;
+        width: 20px;
+        height: 20px;
+        padding-top: 3px;
+
+        color: white;
+      }
+    }
+
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  span{
+    @include flexed-centered;
+  }
+}
